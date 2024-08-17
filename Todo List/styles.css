@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: whitesmoke;
+  display: grid;
+  place-items: center;
+  font-family: Poppins;
+}
+
+button {
+  border: 0;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.container {
+  --border-radius: 6px;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  min-height: 500px;
+  padding: 1.2rem;
+  background: #2b304d;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+form input {
+  width: 78%;
+  padding: 0.5rem;
+  color: white;
+  background-color: #636b97;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-family: inherit;
+  border: 0;
+  outline: none;
+}
+
+form input::placeholder {
+  color: hsl(231, 21%, 75%);
+}
+
+form button {
+  width: 20%;
+  background-color: #eeaa74;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.task {
+  font-weight: 300;
+  color: white;
+  background-color: #636b97;
+  padding: 0.5rem 0.6rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.task .checkbox {
+  width: 1.3em;
+  height: 1.3em;
+  border: 2px solid #eeaa74;
+  border-radius: 50%;
+  outline: none;
+  appearance: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.checkbox::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background-color: #eeaa74;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 120ms ease-in-out;
+}
+
+.task .checkbox:checked::before {
+  transform: scale(1);
+}
+
+.task.done input[type="checkbox"] + .text {
+  text-decoration: line-through;
+}
+
+.task .delete {
+  padding: 0.5rem 1.2rem;
+  color: white;
+  background-color: hsl(0, 60%, 55%);
+  margin-left: auto;
+}
