@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  background-color: #252525;
+  color: white;
+}
+
+.scroll-indicator {
+  height: 10px;
+  width: 100%;
+  position: fixed;
+  top: 1rem;
+}
+
+.scroll-indicator .progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+section {
+  width: 80vw;
+  padding: 40px;
+  margin: 2.5rem auto;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+section > p {
+  font-size: 1.25rem;
+}
+
+.container > section:nth-child(5n + 1) {
+  background-color: #7dffaf;
+  color: black;
+}
+.container > section:nth-child(5n + 2) {
+  background-color: #424242;
+}
+.container > section:nth-child(5n + 3) {
+  background-color: #f6f2f0;
+  color: black;
+}
+.container > section:nth-child(5n + 4) {
+  background-color: #ffcb70;
+  color: black;
+}
+.container > section:nth-child(5n + 5) {
+  background-color: #4158d0;
+}
