@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: #364f6b;
+  background-color: #000f1f;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #d8eaff;
+  border: 5px solid #fc5185;
+  position: relative;
+}
+
+.number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-origin: center center;
+  transform: rotate(var(--rotation));
+}
+
+.number1 {
+  --rotation: 30deg;
+}
+.number2 {
+  --rotation: 60deg;
+}
+.number3 {
+  --rotation: 90deg;
+}
+.number4 {
+  --rotation: 120deg;
+}
+.number5 {
+  --rotation: 150deg;
+}
+.number6 {
+  --rotation: 180deg;
+}
+.number7 {
+  --rotation: 210deg;
+}
+.number8 {
+  --rotation: 240deg;
+}
+.number9 {
+  --rotation: 270deg;
+}
+.number10 {
+  --rotation: 300deg;
+}
+.number11 {
+  --rotation: 330deg;
+}
+
+.number span {
+  display: inline-block;
+  transform: rotate(calc(-1 * var(--rotation)));
+}
+
+.hand {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.hour-hand {
+  width: 12px;
+  height: 110px;
+  background-color: #021225;
+  z-index: 5;
+}
+.minute-hand {
+  width: 6px;
+  height: 150px;
+  background-color: #31d1da;
+  z-index: 4;
+}
+.second-hand {
+  width: 3px;
+  height: 210px;
+  background-color: #fc5185;
+  z-index: 3;
+}
+.center-point {
+  background-color: #68adfb;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
