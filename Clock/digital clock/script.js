@@ -4,7 +4,7 @@ time = document.getElementById("time")
 function getCurrentDate () {
   const currentDate = new Date(),
   options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
-  date.innerHTML = currentDate.toLocaleDateString('es', options)
+  date.innerHTML = currentDate.toLocaleDateString('en', options)
 }
 
 function getCurrentTime () {
